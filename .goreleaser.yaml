@@ -1,0 +1,36 @@
+project_name: git-branch-cleaner
+
+builds:
+  - id: git-branch-cleaner
+    main: ./cmd/git-branch-cleaner
+    binary: git-branch-cleaner
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+
+checksum:
+  name_template: "SHA256SUMS.txt"
+
+brews:
+  - name: git-branch-cleaner
+    homepage: https://github.com/sinansonmez/git-branch-cleaner
+    description: Delete merged git branches
+    repository:
+      owner: sinansonmez
+      name: homebrew-git-branch-cleaner
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    install: |
+      bin.install "git-branch-cleaner"
