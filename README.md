@@ -43,7 +43,7 @@ go run ./cmd/git-branch-cleaner -repo /path/to/repo \
 ## Install (Homebrew)
 
 ```bash
-brew tap sinansonmez/git-branch-cleaner
+brew tap sinansonmez/tools
 brew install git-branch-cleaner
 git-branch-cleaner -h
 ```
