@@ -44,6 +44,7 @@ go run ./cmd/git-branch-cleaner -repo /path/to/repo \
 
 ```bash
 brew tap sinansonmez/git-branch-cleaner
+brew install git-branch-cleaner
 git-branch-cleaner -h
 ```
 
