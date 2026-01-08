@@ -31,7 +31,7 @@ func main() {
 }
 ```
 
-## CLI
+## TUI
 
 ```bash
 go run ./cmd/git-branch-cleaner -repo /path/to/repo \
@@ -39,6 +39,8 @@ go run ./cmd/git-branch-cleaner -repo /path/to/repo \
   -base-candidates develop,main,master \
   -delete-remote=true -delete-local=false
 ```
+
+The TUI will prompt for the rest of the options before running the cleanup.
 
 ## Install (Homebrew)
 
